@@ -29,7 +29,7 @@ const Place = mongoose.model('Place', placeSchema);
 const places = [
     {
         name: "วัดพระแก้ว",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Wiang_Kum_Kam_Temple.jpg/1280px-Wiang_Kum_Kam_Temple.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Wat_Phra_Kaew_by_Ninara_TSP_edit_crop.jpg",
         description: "วัดพระศรีรัตนศาสดาราม หรือวัดพระแก้ว ตั้งอยู่ในบริเวณพระบรมมหาราชวัง กรุงเทพมหานคร เป็นที่ประดิษฐานพระพุทธมหามณีรัตนปฏิมากร (พระแก้วมรกต) พระพุทธรูปคู่บ้านคู่เมืองที่ศักดิ์สิทธิ์ที่สุดของไทย สร้างขึ้นในรัชสมัยพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราช รัชกาลที่ 1",
         googleMap: "https://maps.google.com/?q=13.7516,100.4925",
         appleMap: "",
@@ -50,7 +50,7 @@ const places = [
     },
     {
         name: "วัดโพธิ์",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Reclining_Buddha_at_Wat_Pho.jpg/1280px-Reclining_Buddha_at_Wat_Pho.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Bangkok_Wat_Pho_reclining_Buddha.jpg",
         description: "วัดพระเชตุพนวิมลมังคลาราม หรือวัดโพธิ์ เป็นวัดเก่าแก่ที่มีพระนอนที่ใหญ่ที่สุดในประเทศไทย ยาว 46 เมตร สูง 15 เมตร ปิดทองทั้งองค์ ฝ่าพระบาทประดับมุกเป็นภาพมงคล 108 ประการ นอกจากนี้ยังเป็นต้นกำเนิดของนวดแผนไทย",
         googleMap: "https://maps.google.com/?q=13.7465,100.4930",
         appleMap: "",
@@ -71,7 +71,7 @@ const places = [
     },
     {
         name: "ศาลพระพรหมเอราวัณ",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Erawan_Shrine.jpg/1280px-Erawan_Shrine.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Phra_Phrom_at_Erawan_Shrine.jpg",
         description: "ศาลพระพรหมเอราวัณ หรือ ท้าวมหาพรหม ตั้งอยู่หน้าโรงแรมแกรนด์ไฮแอท เอราวัณ ย่านราชประสงค์ เป็นที่ประดิษฐานพระพรหม 4 หน้าที่ศักดิ์สิทธิ์ที่สุดแห่งหนึ่งในกรุงเทพฯ ผู้คนมาขอพรด้านความรัก โชคลาภ และหน้าที่การงานอย่างไม่ขาดสาย",
         googleMap: "https://maps.google.com/?q=13.7445,100.5395",
         appleMap: "",
@@ -92,7 +92,7 @@ const places = [
     },
     {
         name: "วัดพระธาตุดอยสุเทพ",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Doi_Suthep_temple%2C_Chiang_Mai%2C_Thailand.jpg/1280px-Doi_Suthep_temple%2C_Chiang_Mai%2C_Thailand.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/1/18/Wat_Phra_That_Doi_Suthep_-_Chiang_Mai.jpg",
         description: "วัดพระธาตุดอยสุเทพราชวรวิหาร ตั้งอยู่บนยอดดอยสุเทพ จังหวัดเชียงใหม่ สูงจากระดับน้ำทะเล 1,053 เมตร เป็นวัดที่เป็นสัญลักษณ์ของเมืองเชียงใหม่ พระธาตุสูง 22 เมตร หุ้มด้วยทองแดงชุบทอง มีประวัติกว่า 600 ปี",
         googleMap: "https://maps.google.com/?q=18.8048,98.9217",
         appleMap: "",
@@ -113,7 +113,7 @@ const places = [
     },
     {
         name: "ศาลเจ้าพ่อหลักเมืองกรุงเทพ",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Bangkok_City_Pillar_Shrine.jpg/1280px-Bangkok_City_Pillar_Shrine.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/23/City_pillar_shrine%2C_Bangkok.jpg",
         description: "ศาลหลักเมืองกรุงเทพมหานคร สร้างขึ้นพร้อมกับการสถาปนากรุงรัตนโกสินทร์ในปี พ.ศ. 2325 เป็นเสาหลักเมืองที่ถือเป็นศูนย์กลางและจิตใจของเมือง มีเทวดารักษาเมือง เจ้าพ่อหลักเมืองเป็นที่เคารพสักการะของชาวกรุงเทพฯ และนักท่องเที่ยวทั่วโลก",
         googleMap: "https://maps.google.com/?q=13.7493,100.4928",
         appleMap: "",
@@ -174,7 +174,7 @@ const places = [
     },
     {
         name: "วัดสุทัศนเทพวราราม",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Wat_Suthat_Bangkok.jpg/1280px-Wat_Suthat_Bangkok.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/1/14/Bangkok_wat_suthat_001.JPG",
         description: "วัดสุทัศนเทพวรารามราชวรมหาวิหาร เป็นวัดชั้นเอก ราชวรมหาวิหาร ประดิษฐานพระพุทธตรีโลกเชษฐ์ พระพุทธรูปสำริดขนาดใหญ่ที่สุดในประเทศไทย สูง 8 เมตร หน้าวัดมีเสาชิงช้าสีแดงเป็นสัญลักษณ์ มีจิตรกรรมฝาผนังที่สวยงามชั้นหนึ่งของไทย",
         googleMap: "https://maps.google.com/?q=13.7508,100.4985",
         appleMap: "",
@@ -194,7 +194,7 @@ const places = [
     },
     {
         name: "วัดหลวงพ่อโสธร",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Wat_Sothon_Wararam_Worawihan.jpg/1280px-Wat_Sothon_Wararam_Worawihan.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/1/17/Wat_sothorn_11.jpg",
         description: "วัดโสธรวรารามวรวิหาร หรือวัดหลวงพ่อโสธร ตั้งอยู่ที่อำเภอเมือง จังหวัดฉะเชิงเทรา เป็นที่ประดิษฐานหลวงพ่อโสธร พระพุทธรูปปางสมาธิศักดิ์สิทธิ์ที่ชาวไทยเคารพสักการะมาหลายร้อยปี ตำนานเล่าว่าลอยน้ำมาจากแม่น้ำบางปะกง",
         googleMap: "https://maps.google.com/?q=13.6908,101.0769",
         appleMap: "",
@@ -236,7 +236,7 @@ const places = [
     },
     {
         name: "วัดพนัญเชิง",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Wat_Phanan_Choeng_Ayutthaya.jpg/1280px-Wat_Phanan_Choeng_Ayutthaya.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Ayutthaya_Thailand_Wat_Phanan_Choeng_Golden_Big_Buddha.JPG",
         description: "วัดพนัญเชิงวรวิหาร ตั้งอยู่ที่อำเภอพระนครศรีอยุธยา เป็นที่ประดิษฐานหลวงพ่อโต หรือพระพุทธไตรรัตนนายก พระพุทธรูปขนาดยักษ์สูง 19.5 เมตร วัดนี้สร้างก่อนกรุงศรีอยุธยา และมีชื่อเสียงด้านการค้าขาย เนื่องจากชาวจีนมาสักการะเพื่อขอพรด้านธุรกิจ",
         googleMap: "https://maps.google.com/?q=14.3344,100.5803",
         appleMap: "",
@@ -277,7 +277,7 @@ const places = [
     },
     {
         name: "วัดพระธาตุหริภุญชัย",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Wat_Phra_That_Hariphunchai.jpg/1280px-Wat_Phra_That_Hariphunchai.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/9/99/Wat_Phra_That_Hariphunchai_%28III%29.jpg",
         description: "วัดพระธาตุหริภุญชัยวรมหาวิหาร ตั้งอยู่ที่อำเภอเมือง จังหวัดลำพูน อายุกว่า 1,000 ปี มีเจดีย์ทองสูง 46 เมตร ภายในบรรจุพระบรมธาตุของพระสัมมาสัมพุทธเจ้า เป็นวัดที่สำคัญที่สุดของจังหวัดลำพูนและภาคเหนือ",
         googleMap: "https://maps.google.com/?q=18.5748,99.0073",
         appleMap: "",
@@ -317,7 +317,7 @@ const places = [
     },
     {
         name: "วัดอินทรวิหาร",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wat_Indraviharn_Bangkok.jpg/1280px-Wat_Indraviharn_Bangkok.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wat_Indraviharn_Bangkok.jpg/800px-Wat_Indraviharn_Bangkok.jpg",
         description: "วัดอินทรวิหาร ตั้งอยู่ที่แขวงบางขุนพรหม กรุงเทพฯ เป็นที่ประดิษฐานหลวงพ่อโตหรือพระพุทธรูปยืนที่ใหญ่ที่สุดในกรุงเทพฯ สูง 32 เมตร พระหัตถ์ขวาชี้ขึ้นฟ้า ชาวบ้านเรียกว่าพระยืนหรือหลวงพ่อโต มีผู้มาสักการะเพื่อขอพรด้านความรักและครอบครัว",
         googleMap: "https://maps.google.com/?q=13.7648,100.5010",
         appleMap: "",
@@ -357,7 +357,7 @@ const places = [
     },
     {
         name: "วัดมหาธาตุ อยุธยา",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wat_Mahathat_Ayutthaya_Buddha_head.jpg/1280px-Wat_Mahathat_Ayutthaya_Buddha_head.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Ayutthaya_Thailand_Wat_Mahathat_Buddas_Head_in_Tree.JPG",
         description: "วัดมหาธาตุ ตั้งอยู่ในเกาะเมืองอยุธยา เป็นวัดที่สร้างในสมัยต้นกรุงศรีอยุธยา เคยเป็นที่ประทับของสมเด็จพระสังฆราช มีปรางค์ประธานสูงใหญ่อยู่ตรงกลาง จุดเด่นที่มีชื่อเสียงระดับโลกคือพระพักตร์พระพุทธรูปที่ฝังอยู่ในรากต้นโพธิ์อย่างลึกซึ้ง",
         googleMap: "https://maps.google.com/?q=14.3557,100.5680",
         appleMap: "",
@@ -398,7 +398,7 @@ const places = [
     },
     {
         name: "วัดพระธาตุช้างค้ำวรวิหาร",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Wat_Phra_That_Chang_Kham_Nan.jpg/1280px-Wat_Phra_That_Chang_Kham_Nan.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Wat_Phra_That_Chang_Kham%2C_b%C3%B4t%2C_chedi_et_viharn%2C_Nan.jpg",
         description: "วัดพระธาตุช้างค้ำวรวิหาร ตั้งอยู่ใจกลางเมืองน่าน เป็นวัดสำคัญที่สุดของจังหวัดน่าน มีพระธาตุทรงระฆังแบบล้านนาประยุกต์สูง 55.5 เมตร ตั้งอยู่บนฐานช้างรอบล้อม 6 เชือก เชื่อกันว่าบรรจุพระอุรังคธาตุของพระพุทธเจ้า",
         googleMap: "https://maps.google.com/?q=18.7797,100.7768",
         appleMap: "",
@@ -418,7 +418,7 @@ const places = [
     },
     {
         name: "วัดบวรนิเวศวิหาร",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Wat_Bowon_Bangkok.jpg/1280px-Wat_Bowon_Bangkok.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/f/f9/Ubosot_of_Wat_Bowonniwet.jpg",
         description: "วัดบวรนิเวศราชวรวิหาร ตั้งอยู่ที่ถนนพระสุเมรุ เขตพระนคร กรุงเทพฯ เป็นวัดสำคัญระดับชาติ เคยเป็นที่ประทับของสมเด็จพระสังฆราชและพระบรมวงศ์ทรงผนวช รัชกาลที่ 9 ทรงผนวชที่วัดนี้ มีพระพุทธชินสีห์เป็นพระประธานอันศักดิ์สิทธิ์",
         googleMap: "https://maps.google.com/?q=13.7595,100.5017",
         appleMap: "",
