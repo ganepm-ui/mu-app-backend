@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: mu-app-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb://ganepm_db_user:Pornpimol78@ac-a0tnncq-shard-00-00.rpemqka.mongodb.net:27017,ac-a0tnncq-shard-00-01.rpemqka.mongodb.net:27017,ac-a0tnncq-shard-00-02.rpemqka.mongodb.net:27017/muapp?ssl=true&replicaSet=atlas-3s2pck-shard-0&authSource=admin&retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: mysecretkey
+      - key: NODE_VERSION
+        value: 20.11.0
