@@ -57,7 +57,8 @@ const jwt = require("jsonwebtoken");
 
 const userSchema = new mongoose.Schema({
     username: String,
-    password: String
+    password: String,
+    isAdmin: { type: Boolean, default: false }
 });
 
 const User = mongoose.model("User", userSchema);
@@ -98,7 +99,13 @@ const placeSchema = new mongoose.Schema({
 
     successCount: { type: Number, default: 0 },
 
-    totalPrayerCount: { type: Number, default: 0 }
+    totalPrayerCount: { type: Number, default: 0 },
+
+    status: { type: String, default: "pending", enum: ["pending", "approved", "rejected"] },
+
+    submittedBy: String,
+
+    rejectionReason: String
 
 });
 
@@ -140,6 +147,18 @@ function auth(req, res, next) {
         res.status(401).json({
             message: "Invalid token"
         });
+    }
+}
+function adminAuth(req, res, next) {
+    const token = req.headers.authorization;
+    if (!token) return res.status(401).json({ message: "No token" });
+    try {
+        const decoded = jwt.verify(token, JWT_SECRET);
+        req.user = decoded;
+        if (!decoded.isAdmin) return res.status(403).json({ message: "Admin only" });
+        next();
+    } catch {
+        res.status(401).json({ message: "Invalid token" });
     }
 }
 app.post("/reviews", async (req, res) => {
@@ -202,13 +221,14 @@ app.post("/login", async (req, res) => {
     }
 
     const token = jwt.sign(
-        { id: user._id },
+        { id: user._id, isAdmin: user.isAdmin, username: user.username },
         JWT_SECRET
     );
 
     res.json({
         message: "Login success",
-        token: token
+        token: token,
+        isAdmin: user.isAdmin ?? false
     });
 });
 app.post("/upload", upload.single("image"), (req, res) => {
@@ -247,7 +267,11 @@ app.post("/places", async (req, res) => {
 
         latitude: req.body.latitude ?? null,
 
-        longitude: req.body.longitude ?? null
+        longitude: req.body.longitude ?? null,
+
+        status: "pending",
+
+        submittedBy: req.body.submittedBy ?? null
 
     });
 
@@ -261,7 +285,9 @@ app.post("/places", async (req, res) => {
 });
 app.get("/places", async (req, res) => {
 
-    const places = await Place.find();
+    const places = await Place.find({
+        $or: [{ status: "approved" }, { status: { $exists: false } }]
+    });
 
     const placesWithRating = await Promise.all(
         places.map(async (place) => {
@@ -320,6 +346,11 @@ app.delete("/reviews/:id", async (req, res) => {
     });
 
 });
+app.get("/places/mine", auth, async (req, res) => {
+    const places = await Place.find({ submittedBy: req.user.username });
+    res.json(places);
+});
+
 app.get("/places/:id", async (req, res) => {
 
     const place = await Place.findById(req.params.id);
@@ -418,6 +449,31 @@ app.put("/places/:id/worship-guide", async (req, res) => {
 
     res.json({ message: "Worship guide updated", data: place });
 
+});
+
+app.get("/admin/places/pending", adminAuth, async (req, res) => {
+    const places = await Place.find({ status: "pending" });
+    res.json(places);
+});
+
+app.put("/admin/places/:id/approve", adminAuth, async (req, res) => {
+    const place = await Place.findByIdAndUpdate(
+        req.params.id,
+        { status: "approved" },
+        { new: true }
+    );
+    if (!place) return res.status(404).json({ message: "Place not found" });
+    res.json({ message: "Approved", data: place });
+});
+
+app.put("/admin/places/:id/reject", adminAuth, async (req, res) => {
+    const place = await Place.findByIdAndUpdate(
+        req.params.id,
+        { status: "rejected", rejectionReason: req.body.reason ?? "" },
+        { new: true }
+    );
+    if (!place) return res.status(404).json({ message: "Place not found" });
+    res.json({ message: "Rejected", data: place });
 });
 
 app.listen(PORT, () => {
