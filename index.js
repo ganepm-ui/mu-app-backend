@@ -92,6 +92,10 @@ const placeSchema = new mongoose.Schema({
 
     suitableFor: [String],
 
+    latitude: Number,
+
+    longitude: Number,
+
     successCount: { type: Number, default: 0 },
 
     totalPrayerCount: { type: Number, default: 0 }
@@ -239,7 +243,11 @@ app.post("/places", async (req, res) => {
 
         worshipGuide: req.body.worshipGuide ?? [],
 
-        suitableFor: req.body.suitableFor ?? []
+        suitableFor: req.body.suitableFor ?? [],
+
+        latitude: req.body.latitude ?? null,
+
+        longitude: req.body.longitude ?? null
 
     });
 
