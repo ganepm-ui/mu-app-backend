@@ -377,6 +377,33 @@ app.post("/places/:id/success", async (req, res) => {
 
 });
 
+app.post("/places/:id/not-success", async (req, res) => {
+
+    const place = await Place.findByIdAndUpdate(
+        req.params.id,
+        { $inc: { totalPrayerCount: 1 } },
+        { new: true }
+    );
+
+    if (!place) {
+        return res.status(404).json({ message: "Place not found" });
+    }
+
+    const successRate = place.totalPrayerCount > 0
+        ? Math.round((place.successCount / place.totalPrayerCount) * 100)
+        : 0;
+
+    res.json({
+        message: "Not success recorded",
+        data: {
+            successCount: place.successCount,
+            totalPrayerCount: place.totalPrayerCount,
+            successRate
+        }
+    });
+
+});
+
 app.put("/places/:id/worship-guide", async (req, res) => {
 
     const place = await Place.findByIdAndUpdate(
